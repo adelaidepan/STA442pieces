@@ -13,3 +13,6 @@ shapiro.test(sat$diff)
 
 #do a paired t-test
 t.test(sat$VERBAL, sat$MATH, mu=0, paired = T, alternative = "two.sided")
+
+#do a glm
+glm(GPA ~ VERBAL*MATH, data = sat)
